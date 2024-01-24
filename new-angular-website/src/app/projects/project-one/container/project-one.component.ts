@@ -8,7 +8,7 @@ import { SharedModule } from "../../../shared/shared.module";
 @Component({
   selector: "project-one",
   standalone: true,
-  imports: [FormsModule, SharedModule],
+  imports: [SharedModule],
   templateUrl: "./project-one.component.html",
   styleUrl: "./project-one.component.scss",
 })
