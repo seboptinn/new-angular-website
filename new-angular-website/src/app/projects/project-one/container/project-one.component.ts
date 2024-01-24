@@ -21,15 +21,7 @@ export class ProjectOneComponent {
   public minuteRate = this.hourRate / 60;
   public secondRate = this.minuteRate / 60;
 
-  // public salaryPerMonth = this.salary / 12;
-  // public salaryPerDay = this.salaryPerMonth / 22;
-  // public salaryPerHour = this.salaryPerDay / 7.5;
-  // public salaryPerMinute = this.salaryPerHour / 60;
-  // public salaryPerSecond = this.salaryPerMinute / 60;
-
   public currentPay = 0;
-
-  public secondsInAnHour = 27000;
 
   constructor() {
     const seconds = interval(1000);
@@ -44,5 +36,6 @@ export class ProjectOneComponent {
     this.dayRate = this.hourRate * 7.5;
     this.minuteRate = this.hourRate / 60;
     this.secondRate = this.minuteRate / 60;
+    this.currentPay = 0;
   }
 }
