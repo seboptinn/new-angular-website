@@ -1,21 +1,14 @@
 <p>project-one works!</p>
 <input type="text" [(ngModel)]="salary" />
+<input type="button" (click)="calculate()" value="Calculate" />
 <h2>Paid since start:</h2>
 <h1>{{ currentPay | toFixed : 2 }}</h1>
 <ul>
-  <li>Annualy: {{ salary | currency : "NOK" }}</li>
+  <li>Annualy: {{ salary | currency : "NOK" : "symbol-narrow" }}</li>
 
-  <li>Monthly: {{ salaryPerMonth | currency : "NOK" : "symbol-narrow" }}</li>
-  <li>
-    Daily: {{ salaryPerDay | currency : "NOK" : "symbol-narrow" : "1.0-0" }}
-  </li>
-  <li>
-    Hourly: {{ salaryPerHour | currency : "NOK" : "symbol-narrow" : "1.2-2" }}
-  </li>
-  <li>
-    Minute: {{ salaryPerMinute | currency : "NOK" : "symbol-narrow" : "1.2-2" }}
-  </li>
-  <li>
-    Second: {{ salaryPerSecond | currency : "NOK" : "symbol-narrow" : "1.2-2" }}
-  </li>
+  <li>Monthly: {{ monthRate | currency : "NOK" : "symbol-narrow" }}</li>
+  <li>Daily: {{ dayRate | currency : "NOK" : "symbol-narrow" }}</li>
+  <li>Hourly: {{ hourRate | currency : "NOK" : "symbol-narrow" }}</li>
+  <li>Minute: {{ minuteRate | currency : "NOK" : "symbol-narrow" }}</li>
+  <li>Second: {{ secondRate | currency : "NOK" : "symbol-narrow" }}</li>
 </ul>
