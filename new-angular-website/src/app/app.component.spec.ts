@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'new-angular-website' title`, () => {
+  it(`should have the 'nettside-native' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('new-angular-website');
+    expect(app.title).toEqual('nettside-native');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, new-angular-website');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, nettside-native');
   });
 });
