@@ -6,6 +6,7 @@
 />
 <h2>Paid since start:</h2>
 <h1>{{ currentPay | toFixed : 2 }}</h1>
+<h2>{{ currentPayUpdatedEverySecond | toFixed : 2 }}</h2>
 <ul>
   <li>Annualy: {{ salary | currency : "NOK" : "symbol-narrow" }}</li>
   <li>Monthly: {{ monthRate | currency : "NOK" : "symbol-narrow" }}</li>

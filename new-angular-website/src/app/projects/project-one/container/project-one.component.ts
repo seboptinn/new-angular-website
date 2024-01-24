@@ -22,11 +22,16 @@ export class ProjectOneComponent {
   public secondRate = this.minuteRate / 60;
 
   public currentPay = 0;
+  public currentPayUpdatedEverySecond = 0;
 
   constructor() {
+    const quarterSeconds = interval(250);
+    quarterSeconds.pipe(timeInterval()).subscribe((value) => {
+      this.currentPay += this.secondRate / 4;
+    });
     const seconds = interval(1000);
     seconds.pipe(timeInterval()).subscribe((value) => {
-      this.currentPay += this.secondRate;
+      this.currentPayUpdatedEverySecond += this.secondRate;
     });
   }
 
@@ -37,5 +42,6 @@ export class ProjectOneComponent {
     this.minuteRate = this.hourRate / 60;
     this.secondRate = this.minuteRate / 60;
     this.currentPay = 0;
+    this.currentPayUpdatedEverySecond = 0;
   }
 }
