@@ -25,9 +25,9 @@ export class ProjectOneComponent {
   public currentPayUpdatedEverySecond = 0;
 
   constructor() {
-    const quarterSeconds = interval(250);
-    quarterSeconds.pipe(timeInterval()).subscribe((value) => {
-      this.currentPay += this.secondRate / 4;
+    const tenth = interval(100);
+    tenth.pipe(timeInterval()).subscribe((value) => {
+      this.currentPay += this.secondRate / 10;
     });
     const seconds = interval(1000);
     seconds.pipe(timeInterval()).subscribe((value) => {
