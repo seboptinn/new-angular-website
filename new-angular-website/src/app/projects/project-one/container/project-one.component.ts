@@ -13,7 +13,7 @@ import { SharedModule } from "../../../shared/shared.module";
   styleUrl: "./project-one.component.scss",
 })
 export class ProjectOneComponent {
-  @Input() public salary = 700000;
+  @Input() public salary = 750000;
   public workHoursPerYear = 1950;
   public hourRate = this.salary / this.workHoursPerYear;
   public monthRate = this.hourRate * 162.5;
